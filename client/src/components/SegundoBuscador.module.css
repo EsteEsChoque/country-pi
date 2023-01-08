@@ -1,0 +1,218 @@
+.style.p {
+    display: block;
+}
+.conteiner {
+    display: flex;
+    align-items: center;
+    
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition:  box-shadow 0.3s;
+}
+.conteiner:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.conteinerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    position: absolute;
+    top: 100px;
+    right: 10px;
+}
+
+.liista{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    float: right;
+    margin-left: auto;
+}
+.button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: white;
+    box-shadow: 0 0 0 2px yellow;
+    margin-left: 20px;
+    pointer-events: all;
+}
+
+.button:hover {
+    border-color: green;
+    box-shadow: 0 0 0 2px green;
+}
+.button:hover .fas.fa-check{
+    color: green;
+}
+.label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    
+    position: absolute;
+    top: 50px;
+    right: 410px;
+}
+.input {
+    padding: 10px;
+    width: 245px;
+    border-radius: 20px;
+    position: absolute;
+    
+    top: 80px;
+    right: 295px;
+}
+
+.input:hover,
+.input:focus {
+    box-shadow: 0 0 0 10px rgba(0, 0, 200, 0.1),
+    0 0 0 -10px rgba(0, 0, 200, 0.1);
+    
+    border: 1 px solid rgba(0, 0, 255, 0.1);
+}
+.divForm {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.ul1 {
+    position: absolute;
+    
+    top: 10px;
+    right: 280px;
+}
+.ul2 {
+    position: absolute;
+    
+    top: 10px;
+    right: -20px;
+
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.p {
+    display: block;
+    position: absolute;
+
+    top: 93px;
+    right: 70px;
+   
+}
+.errorNombre {
+    color: red;
+    position: absolute;
+
+    top: 150px;
+    left: 50px;
+}
+.errorpais {
+    color: red;
+    position: absolute;
+
+    top: 150px;
+    right: 100px;
+}
+.hora{
+    height: 500px;
+    position: absolute;
+
+    top: 78px;
+    left: 420px;
+}
+.errorhora {
+    color: red;
+    position: absolute;
+
+    top: 50px;
+    right: 40px;
+}
+
+.dificultad {
+    position: absolute;
+    
+    top: 350px;
+    left: 20px;
+}
+
+.temporada {
+    position: absolute;
+    
+    top: 350px;
+    left: 420px;
+}
+.errortemporada{
+    color: red;
+}
+
+.paisesactividad {
+    position: absolute;
+    
+    top: 98px;
+    right:  53px;
+    
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+
+   
+   .paisesactividad:disabled {
+    pointer-events: none;
+   }
+   
+   .paisesactividad:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   
+   .paisesactividad:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }
+
+   .message {
+    position: absolute;
+    
+    top: 110px;
+    right:  145px;
+   }

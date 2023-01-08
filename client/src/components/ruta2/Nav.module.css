@@ -1,0 +1,108 @@
+select {
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  
+}
+
+.imagenFondo {
+    background-color: red;
+}
+
+.paginadoContainer {
+    display: flex;
+    flex-direction: row;
+ 
+  position: absolute;
+  bottom: 40px;
+  right: 300px;
+  max-height: 550px;
+  flex-wrap: wrap;
+}
+
+
+
+
+.page {
+    color: #090909;
+    padding: 3px 3px;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: rgb(190, 214, 158);
+    font-weight: bold;
+    
+    border: 1px solid #5c5c5c;
+
+
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s,
+    transform cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
+    
+    transition: transform 1s ease-in-out;
+    width: 35px;
+    height: 25px;
+    margin: 3px; 
+   }
+   
+   .page:hover {
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transform: scale(1.05);
+    transform: rotate(-360deg);
+   }
+
+   
+
+.center {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.nav {
+    background-color: rgb(177, 175, 175);
+    margin: 20 20 20 20;
+    height: 50px;
+    text-align: center;
+    
+    border-bottom: 5px solid  rgb(141, 141, 141);
+    justify-content: center; /* centra los elementos dentro del nav */
+}
+
+.nav2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20 20 20 20;
+    
+}
+
+
+.imagen2 {
+    width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+   }
+
+   .boton {
+    display: inline-block;
+    padding: 0.5em 1em;
+   
+    background-color: rgb(27, 173, 255);
+    border-radius: 20px;
+    color: rgb(256, 246, 189);
+    text-decoration: none;
+    position: absolute;
+    top: 5px; /* añade 50px de margen desde la parte superior de la página */
+    margin-left: 40px;
+    font-weight: bold;
+  }
+  
+  .boton:hover {
+    background-color: rgb(95, 168, 0);
+    color: rgb(0, 0, 0);
+  }
+  
+
+  

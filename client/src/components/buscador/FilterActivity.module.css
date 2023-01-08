@@ -1,0 +1,25 @@
+.no {
+    position: absolute;
+    top: 170px;
+    right: 30px;
+}
+
+.caja {
+    position: absolute;
+    top: 170px;
+    right: 120px;
+    
+
+    height: 20px;
+
+    
+}
+.scroll{
+    overflow-y: scroll;
+    height: 100px;
+}
+.alinear {
+    display: flex;
+  justify-content: flex-start;
+  
+}

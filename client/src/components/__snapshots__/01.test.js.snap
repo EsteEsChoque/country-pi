@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActDificultad se renderiza correctamente 1`] = `
+<div
+  className="dificultad"
+>
+  <label
+    htmlFor="dificultad"
+  >
+    Dificultad:
+  </label>
+  <br />
+  <div>
+    <input
+      checked={true}
+      id="difficultymuyFacil"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="muyFacil"
+    />
+    <label
+      htmlFor="difficultymuyFacil"
+    >
+      Muy fácil
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultyfacil"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="facil"
+    />
+    <label
+      htmlFor="difficultyfacil"
+    >
+      Fácil
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultynormal"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="normal"
+    />
+    <label
+      htmlFor="difficultynormal"
+    >
+      Normal
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultydificil"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="dificil"
+    />
+    <label
+      htmlFor="difficultydificil"
+    >
+      Difícil
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultyexperimentados"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="experimentados"
+    />
+    <label
+      htmlFor="difficultyexperimentados"
+    >
+      Experimentados
+    </label>
+    <br />
+  </div>
+</div>
+`;
+
+exports[`Dificultad ActDificultad se renderiza correctamente 1`] = `
+<div
+  className="dificultad"
+>
+  <label
+    htmlFor="dificultad"
+  >
+    Dificultad:
+  </label>
+  <br />
+  <div>
+    <input
+      checked={true}
+      id="difficultymuyFacil"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="muyFacil"
+    />
+    <label
+      htmlFor="difficultymuyFacil"
+    >
+      Muy fácil
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultyfacil"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="facil"
+    />
+    <label
+      htmlFor="difficultyfacil"
+    >
+      Fácil
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultynormal"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="normal"
+    />
+    <label
+      htmlFor="difficultynormal"
+    >
+      Normal
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultydificil"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="dificil"
+    />
+    <label
+      htmlFor="difficultydificil"
+    >
+      Difícil
+    </label>
+    <br />
+  </div>
+  <div>
+    <input
+      checked={false}
+      id="difficultyexperimentados"
+      name="difficulty"
+      onChange={[MockFunction]}
+      type="radio"
+      value="experimentados"
+    />
+    <label
+      htmlFor="difficultyexperimentados"
+    >
+      Experimentados
+    </label>
+    <br />
+  </div>
+</div>
+`;

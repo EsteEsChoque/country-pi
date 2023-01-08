@@ -1,0 +1,30 @@
+.caja {
+    position: absolute;
+    top: 280px;
+    right: 20px;
+    display: block;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  
+
+    
+}
+
+.alinear {
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+}
+
+  
+  label {
+    font-size: px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+  }
+  .input {
+    float: right;
+    clear: both;
+  }

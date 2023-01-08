@@ -1,0 +1,157 @@
+//esto para ver la info como llega en app, justo debajo del primer div
+
+{paises.map((paises) => {
+    return (
+    <div>
+                 <p>{choque++} </p>
+nombre           <p>{paises.name.common} </p>
+                 <p>{paises.idd.root }?? </p>
+id               <p>{paises.idd.suffixes } </p>
+capital          <p>{paises.capital } </p>
+                 <p>{paises.altSpellings }----------------------------altSpellings</p>
+region           <p>{paises.region } </p>
+                 <p>paises.languages.eng .variacion segun idioma </p>
+ubi en latitud   <p>{paises.latlng[0] + "    " + paises.latlng[1] } </p>
+ubi en maps      <p>{paises.maps.googleMaps } </p>
+poblacion        <p>{paises.population } </p>
+img              <p>{paises.flags[0] + "  imagen    " + paises.flags[0] } </p>
+      <hr></hr>
+      </div>)
+   }) }
+
+
+
+
+
+   const ResultadoPais = () => {
+    const buscador = useSelector((state) => state)
+    
+    return (
+        <div  >
+            {buscador.loading && <div className="text-warning">Buscando...</div>}
+            {buscador.pais.length>=1 &&
+            
+            <div className={style.caja}>
+                <Link to = {`/pais/${buscador.pais[0][0].idd.suffixes}`}>
+                    <h4 className="card-title"> {buscador.pais[0][0].name.common}</h4>
+                </Link>
+                <img src={buscador.pais[0][0].flags[1]} className= {style.imagen} alt="" />
+                <p>Capital: {buscador.pais[0][0].capital}</p>
+                <p>Continente: {buscador.pais[0][0].continents}</p>
+                <p>Poblacion: {buscador.pais[0][0].population}</p>
+            </div>}
+            {buscador.error !== "" &&<span className="text-danger">{buscador.error}</span>}
+        </div>
+    )
+}
+
+//export default ResultadoPais
+
+
+// dentro de app, arriba del return 
+const onSearch = (pais) => {
+    axios
+    .get(
+      `https://restcountries.com/v3/name/${pais}`
+      )
+      .then((response) => {
+        setPaises((oldPaises) => [...oldPaises, response.data]);
+      });
+    };
+    
+    const [paises,setPaises] = useState([]);
+    console.log(useState());
+
+//---------------------------------------------------------------------------------------------
+    //import React, {useState, useEffect} from 'react'
+
+    const SearchComponent = () => {
+      //setear los hooks useState
+      const [ users, setUsers ] = useState([])
+      const [ search, setSearch ] = useState("")
+    
+      //función para traer los datos de la API
+      const URL = 'https://jsonplaceholder.typicode.com/users'
+    
+      const showData = async () => {
+        const response = await fetch(URL)
+        const data = await response.json()
+        //console.log(data)
+        setUsers(data)
+      }   
+       //función de búsqueda
+      const searcher = (e) => {
+          setSearch(e.target.value)   
+      }
+       //metodo de filtrado 1 
+       /*  let results = []
+       if(!search)
+       {
+           results = users
+       }else{
+            results = users.filter( (dato) =>
+            dato.name.toLowerCase().includes(search.toLocaleLowerCase())
+        )
+       } */
+    
+       //metodo de filtrado 2   
+       const results = !search ? users : users.filter((dato)=> dato.name.toLowerCase().includes(search.toLocaleLowerCase()))
+      
+       useEffect( ()=> {
+        showData()
+      }, [])
+      
+      //renderizamos la vista
+      return (
+        <div>
+            <input value={search} onChange={searcher} type="text" placeholder='Search' className='form-control'/>
+            <table className='table table-striped table-hover mt-5 shadow-lg'>
+                <thead>
+                    <tr className='bg-curso text-white'>
+                        <th>NAME</th>
+                        <th>USER NAME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    { results.map( (user) => (
+                        <tr key={user.id}>
+                            <td>{user.name}</td>
+                            <td>{user.username}</td>
+                        </tr>                    
+                    ))}
+                </tbody>
+            </table>
+        </div>
+      )
+    }
+   // export default SearchComponent
+    
+   //  --------------------------------------------------------------------
+   import React from "react";
+import { useState } from "react";
+import {useDispatch} from 'react-redux'
+import axiosPais from "../../redux/actions";
+
+const BuscadorPais = () => {
+    const dispatch = useDispatch()
+    const [pais,setPais] = useState('argentina')
+    return (
+        <div className="form-group">
+            <label htmlFor="buscar_pais" className="text-white">Buscar pais</label>
+            <input type="text" className="form-control" id="buscador_pais" 
+            value={pais}
+            onChange = {
+                (event) => {
+                    setPais(event.target.value)
+                }
+            }
+            />
+            <button className="btn btn-primary mt-3"
+            onClick={ () => {
+                dispatch(axiosPais(pais))
+            }}
+            >Buscar</button>
+        </div>
+    )
+}
+export default BuscadorPais
