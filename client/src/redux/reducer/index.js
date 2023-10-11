@@ -131,16 +131,17 @@ const rootReducer = (state = initialState, action) => {
         filter: state.filter,
       };
       case ACTIVITY_FILTER:
-      const { name, Countrys } = action.payload;
-      const countryIds = Countrys.map(country => country.id);
-      return {
-        ...state,
-        pais: !countryIds.length
-        ? state.paises
-        :state.paises.filter(pais => countryIds.includes(pais.id))
-      };
+        const { name, Countrys } = action.payload;
+        const countryIds = Countrys && Array.isArray(Countrys)
+          ? Countrys.map(country => country.id)
+          : [];
+        return {
+          ...state,
+          pais: countryIds.length
+            ? state.paises.filter(pais => countryIds.includes(pais.id))
+            : state.paises
+        };
   
-      
 
     case PAIS_DETAIL:
       return {

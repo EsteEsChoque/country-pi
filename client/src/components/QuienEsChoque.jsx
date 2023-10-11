@@ -13,7 +13,7 @@ class QuienEsChoque extends Component {
         <div className={style.container}>
             <p>Yo soy choque</p>
             
-            <a href="https://www.soyhenry.com/" target="_blank">
+            <a href="https://github.com/EsteEsChoque" target="_blank">
                 <img src={GitHub} alt="planeta" className={style.imagen2} />
             </a>
         </div>

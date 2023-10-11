@@ -15,12 +15,13 @@ import style from "./BuscadorPais.module.css";
 
 const BuscadorPais = () => {
     useEffect(() => {
-        dispatch(getActivity())
-      },)
+        dispatch(getActivity());
+      }, []);
+      
 
 
     const todopais = useSelector((state) => state)
-    console.log(todopais);
+ 
     const dispatch = useDispatch()
     const [ search, setSearch ] = useState("")
     const [actividades, setActividades] = useState("");
