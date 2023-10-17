@@ -10,6 +10,8 @@ import {  getPaises, getActivity } from "./redux/actions";
 import { useEffect } from "react";
 import {useDispatch} from 'react-redux'
 import Actividades from './components/Actividades';
+import axios from "axios";
+axios.defaults.baseURL = 'http://localhost:3001';
 
 
 function App() {

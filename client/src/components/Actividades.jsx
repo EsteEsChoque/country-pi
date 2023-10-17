@@ -44,7 +44,7 @@ const Actividades = () => {
   async function checkIfActivityExists(activityName) {
     try {
       const res = await axios.get(`http://localhost:3001/actividades/${activityName}`);
-      console.log("hola",res.data.name);
+      
       return res.data.activityExists;
     } catch (err) {
       console.error(err);
@@ -61,7 +61,7 @@ const Actividades = () => {
         }));
       }
     }
-    console.log("+++++++++++++++++++");
+   
     validateActivityName();
   }, [formData.activityName]);
   
@@ -113,7 +113,7 @@ const Actividades = () => {
         nombre: "Esa actividad ya está creada",
       }));
     }
-    console.log(exists,"++++++++++++++++++");
+    
     
   }
   useEffect(() => {
@@ -176,7 +176,7 @@ const Actividades = () => {
     }
   }
     
-  console.log(error);
+ 
   const options = [];
   for (let i = 0; i <= 6; i++) {
   options.push(<option key={`${i}:00`} value={`${i}:00`}>{`${i}:00hs`}</option>);

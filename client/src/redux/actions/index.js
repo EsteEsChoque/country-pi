@@ -17,7 +17,7 @@ export const PAISES_SELECCIONADOS = "PAISES_SELECCIONADOS";
 
 export const getPaises = () => {
   return async (dispatch) => {
-    const data = await axios.get("http://localhost:3001/all");
+    const data = await axios.get("/all");
     return dispatch({
       type: GET_PAISES,
       payload: data.data,
@@ -27,7 +27,7 @@ export const getPaises = () => {
 
 export const getActivity = () => {
   return async (dispatch) => {
-    const data = await axios.get("http://localhost:3001/actividades");
+    const data = await axios.get("/actividades");
     return dispatch({
       type: GET_ACTIVITY,
       payload: data.data,
@@ -77,7 +77,7 @@ export const continentFilter = (continents) => {
 
   export const activityFilter = (activity) => {
     return async (dispatch) => {
-      const data = await axios.get(`http://localhost:3001/actividades/${activity}`);
+      const data = await axios.get(`/actividades/${activity}`);
       return dispatch({
         type: ACTIVITY_FILTER,
         payload: data.data,
@@ -89,7 +89,7 @@ export const continentFilter = (continents) => {
 
 export const paisDetail = (id) => {
   return async (dispatch) => {
-    const data = await axios.get(`http://localhost:3001/paises/${id}`);
+    const data = await axios.get(`/paises/${id}`);
     return dispatch({
       type: PAIS_DETAIL,
       payload: data.data,
